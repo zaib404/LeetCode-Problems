@@ -1,9 +1,14 @@
 ﻿using LeetCode_Problems.Medium_Problems;
 using LeetCode_Problems.Useful_LeetCode_Stuff;
 using LeetCode_Problems.Easy_Problems;
+using System.Data.SqlTypes;
+using LeetCode_Problems.Hard_Problems;
 
 namespace LeetCode_Problems
 {
+    /// <summary>
+    /// https://leetcode.com/zaib97/
+    /// </summary>
     internal class Program
     {
         static OutputNodes outputNodes = new OutputNodes();
@@ -11,13 +16,24 @@ namespace LeetCode_Problems
 
         static void Main(string[] args)
         {
-
+            FindMaximizedCapital();
             Console.ReadLine();
         }
 
-        static void ShipWithinDays()
+        static void FindMaximizedCapital()
         {
-            //https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+            Q502 IPO = new Q502();
+            // solution is kinda wrong. will fix at a later date.
+            int ans = IPO.FindMaximizedCapital(2, 0, new int[] { 1, 2, 3 }, new int[] { 0, 1, 1 });
+            Console.WriteLine(ans);
+
+        }
+
+        static void LengthOfLongestSubstring()
+        {
+            Q3 longestSubstring = new Q3();
+            int a = longestSubstring.LengthOfLongestSubstring("abcabcbb");
+            Console.WriteLine(a);
         }
 
         static void AddTwoNumbers()
