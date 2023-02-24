@@ -16,17 +16,16 @@ namespace LeetCode_Problems
 
         static void Main(string[] args)
         {
-            FindMaximizedCapital();
             Console.ReadLine();
         }
 
-        static void FindMaximizedCapital()
-        {
-            Q502 IPO = new Q502();
-            // solution is kinda wrong. will fix at a later date.
-            int ans = IPO.FindMaximizedCapital(2, 0, new int[] { 1, 2, 3 }, new int[] { 0, 1, 1 });
-            Console.WriteLine(ans);
+        
 
+        static void FindMedianSortedArrays()
+        {
+            Q4 findMedianSortedArrays = new Q4();
+            double ans = findMedianSortedArrays.FindMedianSortedArrays(new int[] { 1, 3 }, new int[] { 2 });
+            Console.WriteLine(ans);
         }
 
         static void LengthOfLongestSubstring()
@@ -121,5 +120,27 @@ namespace LeetCode_Problems
             int valueI = romanToInteger.RomanToInt("LXIX");
             Console.WriteLine(valueI);
         }
+
+        #region Incomplete Problems
+
+        static void FindMaximizedCapital()
+        {
+            Q502 IPO = new Q502();
+            // solution is kinda wrong. will fix at a later date.
+            int ans = IPO.FindMaximizedCapital(2, 0, new int[] { 1, 2, 3 }, new int[] { 0, 1, 1 });
+            Console.WriteLine(ans);
+
+        }
+        
+        static void MinimumDeviation()
+        {
+            Q1675 minimumDeviation = new Q1675();
+            int ans = minimumDeviation.MinimumDeviation(new int[] { 10, 20, 30, 40, 50 });
+            Console.WriteLine(ans);
+        }
+
+
+
+        #endregion
     }
 }
