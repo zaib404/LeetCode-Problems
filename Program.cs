@@ -16,8 +16,18 @@ namespace LeetCode_Problems
 
         static void Main(string[] args)
         {
-            InvertTree();
+            RunningSum();
             Console.ReadLine();
+        }
+
+        static void RunningSum()
+        {
+            Q1480 runningSum = new Q1480();
+
+            int[] sum = runningSum.RunningSum(new int[] { 1, 2, 3, 4 });
+            List<int> results = sum.ToList();
+
+            results.ForEach(x => { Console.Write(x + ","); });
         }
 
         static void InvertTree()
