@@ -9,7 +9,7 @@ namespace LeetCode_Problems.Useful_LeetCode_Stuff
 {
     internal class OutputNodes
     {
-        public void WriteNodes(ListNode pNodes)
+        public void WriteListNodes(ListNode pNodes)
         {
             string ans = "";
             while (pNodes != null)
@@ -19,5 +19,6 @@ namespace LeetCode_Problems.Useful_LeetCode_Stuff
             }
             Console.WriteLine(ans);
         }
+
     }
 }

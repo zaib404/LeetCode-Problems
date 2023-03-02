@@ -12,14 +12,31 @@ namespace LeetCode_Problems
     internal class Program
     {
         static OutputNodes outputNodes = new OutputNodes();
-        static CreateLinkedList createLinkedLists = new CreateLinkedList();
+        static AutomateThings automateThings = new AutomateThings();
 
         static void Main(string[] args)
         {
+            InvertTree();
             Console.ReadLine();
         }
 
-        
+        static void InvertTree()
+        {
+            Q226 invertTree = new Q226();
+
+            TreeNode root = automateThings.AutomateBinaryTree(new int?[] { 4, 1, 3, 4, 5, 6, 7, 8, null, 9, 0, 1, 2, 3, 4, 5, 6, null, 1 });
+            
+            root = invertTree.InvertTree(root);
+
+            Console.WriteLine(root.val);
+        }
+
+        static void MaxProfit()
+        {
+            Q121 maxProfit = new Q121();
+            int ans = maxProfit.MaxProfit(new int[] { 2,4,1 });
+            Console.WriteLine(ans);
+        }
 
         static void FindMedianSortedArrays()
         {
@@ -39,10 +56,10 @@ namespace LeetCode_Problems
         {
             Q2 twoNums = new Q2();
 
-            ListNode leftNode = createLinkedLists.AutomateLinkedLists(new int[] { 2, 4, 3 });
-            ListNode rightNode = createLinkedLists.AutomateLinkedLists(new int[] { 5, 6, 4 });
+            ListNode leftNode = automateThings.AutomateListNodes(new int[] { 2, 4, 3 });
+            ListNode rightNode = automateThings.AutomateListNodes(new int[] { 5, 6, 4 });
 
-            outputNodes.WriteNodes(twoNums.AddTwoNumbers(leftNode, rightNode));
+            outputNodes.WriteListNodes(twoNums.AddTwoNumbers(leftNode, rightNode));
         }
 
         static void TwoSum()
@@ -91,12 +108,12 @@ namespace LeetCode_Problems
 
         static void MiddleLinked()
         {
-            ListNode listNode = createLinkedLists.AutomateLinkedLists(new int[] { 1, 2, 3, 4, 5 });
+            ListNode listNode = automateThings.AutomateListNodes(new int[] { 1, 2, 3, 4, 5 });
 
             Q876 middle_Of_The_Linked_List = new Q876();
             ListNode node = middle_Of_The_Linked_List.MiddleNode(listNode);
 
-            outputNodes.WriteNodes(node);
+            outputNodes.WriteListNodes(node);
 
         }
 
@@ -122,6 +139,14 @@ namespace LeetCode_Problems
         }
 
         #region Incomplete Problems
+
+        // Q5
+        static void LongestPalindrome()
+        {
+            Q5 longestPalindrome = new Q5();
+            string ans = longestPalindrome.LongestPalindrome("babad");
+            Console.WriteLine(ans);
+        }
 
         static void FindMaximizedCapital()
         {

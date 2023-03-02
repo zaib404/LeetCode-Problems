@@ -23,9 +23,9 @@ namespace LeetCode_Problems.Medium_Problems
     {
         public string LongestPalindrome(string s)
         {
+            string longestP = "";
 
-
-            return "";
+            return longestP;
         }
     }
 }
