@@ -54,5 +54,43 @@ namespace LeetCode_Problems
 
             return false;
         }
+
+        public bool CanConstruct2(string ransomNote, string magazine)
+        {
+            // if the magazine length is less than the ransom that means it cannot match.
+            if (magazine.Length < ransomNote.Length)
+            {
+                return false;
+            }
+
+            Dictionary<char, int> map = new Dictionary<char, int>();
+
+            foreach (var letter in magazine)
+            {
+                if (map.ContainsKey(letter))
+                {
+                    map[letter] += 1;
+                }
+                else
+                {
+                    map.Add(letter, 1);
+                }
+            }
+
+            foreach (char letter in ransomNote)
+            {
+                if (!map.ContainsKey(letter)) { return false; }
+                else
+                {
+                    map[letter] -= 1;
+
+                    if (map[letter] == 0)
+                    {
+                        map.Remove(letter);
+                    }
+                }
+            }
+            return true;
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace LeetCode_Problems
 
         static void Main(string[] args)
         {
-            RunningSum();
+            Ransom();
             Console.ReadLine();
         }
 
@@ -116,12 +116,12 @@ namespace LeetCode_Problems
             ans.ToList().ForEach(Console.WriteLine);
         }
 
-        static void MiddleLinked()
+        static void MiddleLinkedNode()
         {
-            ListNode listNode = automateThings.AutomateListNodes(new int[] { 1, 2, 3, 4, 5 });
+            ListNode listNode = automateThings.AutomateListNodes(new int[] { 1, 2, 3, 4, 5, 6 });
 
             Q876 middle_Of_The_Linked_List = new Q876();
-            ListNode node = middle_Of_The_Linked_List.MiddleNode(listNode);
+            ListNode node = middle_Of_The_Linked_List.MiddleNode2(listNode);
 
             outputNodes.WriteListNodes(node);
 
@@ -137,7 +137,7 @@ namespace LeetCode_Problems
         static void Ransom()
         {
             Q383 ransomNote = new Q383();
-            bool valueB = ransomNote.CanConstruct("abc", "cba");
+            bool valueB = ransomNote.CanConstruct2("abcdee", "abcdefghijklmnopqrstuvwxyz");
             Console.WriteLine(valueB);
         }
 
