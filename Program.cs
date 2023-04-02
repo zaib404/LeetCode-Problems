@@ -16,8 +16,23 @@ namespace LeetCode_Problems
 
         static void Main(string[] args)
         {
-            Ransom();
+
+            WordDictionary();
             Console.ReadLine();
+        }
+
+        static void CanPlaceFlowers()
+        {
+            Q605 canPlaceFlowers = new Q605();
+            bool ans = canPlaceFlowers.CanPlaceFlowers(new int[] { 0, 0, 0, 0, 0, 1, 0, 0 }, 0);
+            Console.WriteLine(ans);
+        }
+
+        static void FindKthPositive()
+        {
+            Q1539 findKthPositive = new Q1539();
+            int ans = findKthPositive.FindKthPositive(new int[] { 1, }, 1);
+            Console.WriteLine(ans);
         }
 
         static void RunningSum()
@@ -174,7 +189,19 @@ namespace LeetCode_Problems
             Console.WriteLine(ans);
         }
 
+        static void WordDictionary()
+        {
+            Q211 wordDictionary = new Q211();
+            wordDictionary.AddWord("bad");
+            wordDictionary.AddWord("dad");
+            wordDictionary.AddWord("mad");
+            wordDictionary.AddWord("mad");
 
+            Console.WriteLine(wordDictionary.Search("pad"));
+            Console.WriteLine(wordDictionary.Search("bad"));
+            Console.WriteLine(wordDictionary.Search(".ad"));
+            Console.WriteLine(wordDictionary.Search("b.."));
+        }
 
         #endregion
     }
