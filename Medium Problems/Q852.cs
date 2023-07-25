@@ -23,21 +23,15 @@ namespace LeetCode_Problems.Medium_Problems
     {
         public int PeakIndexInMountainArray(int[] arr)
         {
-            int peak = 0;
-
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i+1] > arr[i])
+                if (arr[i + 1] < arr[i])
                 {
-                    peak++;
-                }
-                else
-                {
-                    break;
+                    return i;
                 }
             }
 
-            return peak;
+            return 0;
         }
     }
 }
