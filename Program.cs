@@ -17,8 +17,15 @@ namespace LeetCode_Problems
         static void Main(string[] args)
         {
 
-            WordDictionary();
+            PeakIndexInMountainArray();
             Console.ReadLine();
+        }
+
+        static void PeakIndexInMountainArray()
+        {
+            Q852 peakIndexInMountainArray = new Q852();
+            int ans = peakIndexInMountainArray.PeakIndexInMountainArray(new int[] { 0, 1, 0 });
+            Console.WriteLine(ans);
         }
 
         static void CanPlaceFlowers()
