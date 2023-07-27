@@ -16,9 +16,22 @@ namespace LeetCode_Problems
 
         static void Main(string[] args)
         {
-
-            PeakIndexInMountainArray();
+            IsPrefixString();
             Console.ReadLine();
+        }
+
+        static void IsPrefixString()
+        {
+            Q1961 isPrefixString = new Q1961();
+            bool ans = isPrefixString.IsPrefixString("iloveleetcode", new string[] { "apples", "i", "love", "leetcode" });
+            Console.WriteLine(ans);
+        }
+
+        static void MinSpeedOnTime()
+        {
+            Q1870 minSpeedOnTime = new Q1870();
+            int ans = minSpeedOnTime.MinSpeedOnTime(new int[] { 1, 1, 100000 }, 2.01);
+            Console.WriteLine(ans);
         }
 
         static void PeakIndexInMountainArray()
